@@ -1,6 +1,6 @@
 ![Banner By Prahlad Inala](https://prahladinala.in/img/others/gitcommiter.png)
 
-# Project Name
+# Git Automation using Bash Scripting
 
 This Readme File is generate by Prahlad Inala
 
