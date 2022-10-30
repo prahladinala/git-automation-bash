@@ -47,10 +47,12 @@ myGitCommitQ(){
 [1] Create a sample ReadMe.md file
 [2] Commit all the changes to Git
 [3] Push Code to Remote Git
-[4] Commit all changes and Push Code to Remote Git
-[5] Commit only particular files to Git
-[6] Commit only particular files and Push Code to Remote Git?
-[7] Exit
+[4] Commit all changes and Push Code to New Remote Git
+[5] Commit all changes and Push Code to Exiting Remote Git
+[6] Commit only particular files to Git
+[7] Commit only particular files and Push Code to New Remote Git?
+[8] Commit only particular files and Push Code to Exiting Remote Git?
+[9] Exit
     "
     read -p '(Please Enter Your Choice): ' gitCommitQ
     if [ $gitCommitQ == "1" ]; then
@@ -66,19 +68,31 @@ myGitCommitQ(){
         myGitPush
         myGitCommitQ
     elif [ $gitCommitQ == "5" ]; then
-        myGitCommitParticular
+        myGitCommitAll
+        myGitPushExisting
         myGitCommitQ
     elif [ $gitCommitQ == "6" ]; then
         myGitCommitParticular
-        myGitPush
         myGitCommitQ
     elif [ $gitCommitQ == "7" ]; then
+        myGitCommitParticular
+        myGitPush
+        myGitCommitQ
+    elif [ $gitCommitQ == "8" ]; then
+        myGitCommitParticular
+        myGitPushExisting
+        myGitCommitQ
+    elif [ $gitCommitQ == "9" ]; then
         thankyou
         exit
     else
         echo "Invalid Choice!"
         myGitCommitQ
     fi
+}
+myGitPushExisting(){
+    git push
+    echo "Push Successful!"
 }
 myGitCommitAll(){
     echo "Enter Commit Message: "
