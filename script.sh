@@ -11,6 +11,23 @@ prahlad(){
 echo ""
 } 
 prahlad
+thankyou(){
+    echo ""
+    echo "████████╗██╗  ██╗ █████╗ ███╗   ██╗██╗  ██╗    ██╗   ██╗ ██████╗ ██╗   ██╗
+╚══██╔══╝██║  ██║██╔══██╗████╗  ██║██║ ██╔╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║
+   ██║   ███████║███████║██╔██╗ ██║█████╔╝      ╚████╔╝ ██║   ██║██║   ██║
+   ██║   ██╔══██║██╔══██║██║╚██╗██║██╔═██╗       ╚██╔╝  ██║   ██║██║   ██║
+   ██║   ██║  ██║██║  ██║██║ ╚████║██║  ██╗       ██║   ╚██████╔╝╚██████╔╝
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝       ╚═╝    ╚═════╝  ╚═════╝"
+   echo ""
+    echo "Thank you for using this script"
+    echo "Please visit https://prahladinala.in for my Portfolio"
+    echo "Please visit https://toolmate.co.in for more such tools"
+    echo "Please follow me on Twitter https://twitter.com/prahladinala"
+    echo "Please follow me on Instagram https://instagram.com/prahladinala"
+    echo "Please follow me on LinkedIn https://linkedin.com/in/prahladinala"
+    echo "Please follow me on GitHub https://github.com/prahladinala"
+}
 echo "################# WELCOMES YOU TO GIT SETUP WIZARD #################"
 
 echo "Do You Already Setup Git? (y/n)"
@@ -56,6 +73,7 @@ myGitCommitQ(){
         myGitPush
         myGitCommitQ
     elif [ $gitCommitQ == "7" ]; then
+        thankyou
         exit
     else
         echo "Invalid Choice!"
@@ -161,6 +179,7 @@ myGitRepoQ(){
         myInitGitRepo
         myGitCommitQ
     elif [ $gitRepoQ == "4" ]; then
+        thankyou
         exit
     else
         echo "Invalid Choice!"
